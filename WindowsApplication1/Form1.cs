@@ -17,7 +17,6 @@ namespace WindowsApplication1
         {
             InitializeComponent();
             InitializeDataGridViews();
-            
         }
 
         private void dataGridView1_DragDrop(object sender, DragEventArgs e)
@@ -132,11 +131,8 @@ namespace WindowsApplication1
             }
         }
 
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
-
             this.WindowState = FormWindowState.Maximized;
             InitializeDataGridViews();
         }
@@ -151,7 +147,7 @@ namespace WindowsApplication1
 
             // Set the height of the DataGridViews as desired
             // For example:
-            dataGridView1.Height = 800; // Set height to 400 pixels
+            dataGridView1.Height = (int)(this.Height * 0.65); // Set height to 400 pixels
             dataGridView2.Height = 200; // Set height to 200 pixels
 
             // Adjust the location of the DataGridViews if needed
@@ -189,6 +185,7 @@ namespace WindowsApplication1
                 }
             }
         }
+
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             OpenFileDialog opf = new OpenFileDialog();
